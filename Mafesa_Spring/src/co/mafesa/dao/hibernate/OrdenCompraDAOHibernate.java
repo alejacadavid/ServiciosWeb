@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Criteria;
+import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -34,6 +35,7 @@ public class OrdenCompraDAOHibernate implements OrdenCompraDAO {
 			session = sessionFactory.getCurrentSession();
 			criteria = session.createCriteria(OrdenCompra.class);
 			ordenesCompra = criteria.list();
+			
 		}catch(HibernateException e){
 			throw new MyException("Se encontraron errores consultando las ordenes de compra",e);
 		}

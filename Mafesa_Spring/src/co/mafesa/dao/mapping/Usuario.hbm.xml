@@ -36,7 +36,7 @@
         <property name="fechaCreacion" type="java.util.Date">
             <column name="FECHACREACION" />
         </property>
-        <many-to-one name="cliente" class="co.mafesa.dto.Cliente" fetch="select" >
+        <many-to-one name="cliente" class="co.mafesa.dto.Cliente" fetch="join" >
         	<column name="CLIENTE"></column>
         </many-to-one>
       

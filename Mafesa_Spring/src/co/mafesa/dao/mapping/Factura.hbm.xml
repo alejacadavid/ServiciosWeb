@@ -14,7 +14,7 @@
         <property name="fechaVencimiento" type="java.util.Date">
             <column name="FECHAVENCIMIENTO" />
         </property>
-        <many-to-one name="ordenCompra" class="co.mafesa.dto.OrdenCompra" fetch="select">
+        <many-to-one name="ordenCompra" class="co.mafesa.dto.OrdenCompra" fetch="join">
             <column name="NUMORDENCOMPRA" />
         </many-to-one>
         <property name="valorImpuestos" type="java.lang.Double">

@@ -165,13 +165,12 @@ public class ServicioUsuario {
 	@Path("login")
 	@Produces(MediaType.TEXT_PLAIN)
 	@GET
-	public String autenticar(@QueryParam("nombreUsuario")String nombreUsuario, @QueryParam("contrasena")String contrasena){
+	public String validar(@QueryParam("nombreUsuario")String nombreUsuario, @QueryParam("contrasena")String contrasena){
 		try{
 			usuarioService.autenticar(nombreUsuario, contrasena);
-			return "Ingreso correcto";
 		}catch(MyException e){
 			return e.getMessage();
 		}
-		
+		return "";
 	}
 }

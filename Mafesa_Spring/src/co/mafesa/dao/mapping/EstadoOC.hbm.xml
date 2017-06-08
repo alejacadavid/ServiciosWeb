@@ -11,7 +11,7 @@
         <many-to-one name="estado" class="co.mafesa.dto.Estado" fetch="join">
             <column name="ESTADO" />
         </many-to-one>
-        <many-to-one name="usuarioEstado" class="co.mafesa.dto.Usuario" fetch="select">
+        <many-to-one name="usuarioEstado" class="co.mafesa.dto.Usuario" fetch="join">
             <column name="USUARIOESTADO" />
         </many-to-one>
         
@@ -24,7 +24,7 @@
         <property name="fechaEstado" type="java.util.Date">
             <column name="FECHAESTADO" />
         </property>
-        <many-to-one name="idOrdenCompra" class="co.mafesa.dto.OrdenCompra" fetch="select">
+        <many-to-one name="idOrdenCompra" class="co.mafesa.dto.OrdenCompra" fetch="join">
             <column name="IDORDENCOMPRA" />
         </many-to-one>
     </class>
